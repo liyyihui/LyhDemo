@@ -24,8 +24,6 @@ import android.view.View;
 
 public class CylindricalityView extends View {
     private Paint mpaintline;//边线画笔
-    private Paint mpaintview;//柱形画笔
-    private Paint mpaintnumber;//数字画笔
     private Bitmap bitmap;//设置的图片
     private int width;//宽
     private int height;//高
@@ -38,7 +36,7 @@ public class CylindricalityView extends View {
         if(mpaintline == null){
             mpaintline = new Paint();
             mpaintline.setAntiAlias(true);
-            mpaintview.setStyle(Paint.Style.FILL); //实心
+            mpaintline.setStyle(Paint.Style.FILL); //实心
 
         }
     }
@@ -59,6 +57,7 @@ public class CylindricalityView extends View {
         Log.e("LYH","bitmap"+(bitmap==null));
         Log.e("LYH","drawable"+(drawable==null));
        // Log.e("LYH","drawableID"+(R.styleable.CylindricalityView_bitmap));
+        array.recycle();
     }
 
     public CylindricalityView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -88,7 +87,7 @@ public class CylindricalityView extends View {
         super.onDraw(canvas);
     }
 
-    private static Bitmap zoomImage(Bitmap bgimage, double newWidth,
+    private  Bitmap zoomImage(Bitmap bgimage, double newWidth,
                                    double newHeight) {
         // 获取这个图片的宽和高
         float width = bgimage.getWidth();

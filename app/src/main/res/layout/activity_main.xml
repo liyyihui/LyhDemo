@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
+    android:layout_height="match_parent"
+  android:orientation="vertical"
     tools:context="com.example.mymis.lyhview.MainActivity">
 
     <com.example.mymis.lyhview.CylindricalityView
+        android:id="@+id/tt1"
         android:layout_width="50dp"
         android:layout_height="50dp"
          app:bitmap="@drawable/mm"
          />
 
-</android.support.constraint.ConstraintLayout>
+    <com.example.mymis.lyhview.CircularProgressView
+        android:id="@+id/tt2"
+        android:layout_width="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="200dp"
+         app:paintcolor="#ff0000"
+        />
+</LinearLayout>

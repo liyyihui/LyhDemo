@@ -3,6 +3,12 @@
     <declare-styleable name="CylindricalityView">
      <attr name="bitmap" format="reference"/>
     </declare-styleable>
-
+  <declare-styleable name="CircularProgressView">
+      <attr name="paintcolor" format="color"/>
+      <attr name="satrtcolor" format="color"/>
+      <attr name="opengradualchange" format="boolean"/>
+      <attr name="endcolor" format="color"/>
+      <attr name="textcolor" format="color"/>
+  </declare-styleable>
 
 </resources>
