@@ -67,12 +67,11 @@ public class CircularProgressView extends ProgressBar {
         mLinepaint.setStyle(Paint.Style.STROKE);
         mProgresss.setStyle(Paint.Style.STROKE);
           if(isopen){//开启渐变
-              Log.e("LYH","进入渐变");
               Shader shader = new LinearGradient(width/2,height/2,width/2,height/2, paintstartcolor,
                      paintendcolor,Shader.TileMode.CLAMP);
               mProgresss.setShader(shader);
          }else {  //不开渐变
-              Log.e("LYH","未进入渐变");
+
               mProgresss.setColor(paintcolor);
                 }
         mProgresss.setStrokeCap(Paint.Cap.ROUND);//画笔线条头子类型

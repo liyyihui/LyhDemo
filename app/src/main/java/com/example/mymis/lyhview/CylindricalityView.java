@@ -54,8 +54,7 @@ public class CylindricalityView extends View {
         bitmap = bt.getBitmap();
        // bitmap = BitmapFactory.decodeResource(getResources(),R.styleable.CylindricalityView_bitmap);
 
-        Log.e("LYH","bitmap"+(bitmap==null));
-        Log.e("LYH","drawable"+(drawable==null));
+       
        // Log.e("LYH","drawableID"+(R.styleable.CylindricalityView_bitmap));
         array.recycle();
     }
