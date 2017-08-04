@@ -19,7 +19,7 @@ import java.util.Random;
 /**
  * 作者：LYH   2017/8/4
  * <p>
- * 邮箱：18081745066@163.com
+ * 邮箱：945131558@qq.com
  */
 
 public class VerifyCode extends View {

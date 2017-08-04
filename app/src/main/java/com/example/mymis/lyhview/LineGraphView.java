@@ -15,7 +15,7 @@ import android.widget.Toast;
 /**
  * 作者：LYH   2017/7/27
  * <p>
- * 邮箱：18081745066@163.com
+ * 邮箱：945131558@qq.com
  */
 
 public class LineGraphView extends View {

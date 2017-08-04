@@ -18,7 +18,7 @@ import android.widget.ProgressBar;
 /**
  * 作者：LYH   2017/7/20
  * <p>
- * 邮箱：18081745066@163.com
+ * 邮箱：945131558@qq.com
  */
 
 public class CircularProgressView extends ProgressBar {
