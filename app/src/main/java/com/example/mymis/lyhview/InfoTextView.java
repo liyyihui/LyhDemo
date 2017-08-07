@@ -114,7 +114,7 @@ public class InfoTextView extends android.support.v7.widget.AppCompatTextView {
           showx = width-getPaddingLeft()-(gettextwidth(mShowtext)+60);
           showy = height-10;
           canvas.drawText(mShowtext,showx,showy,mShowTextPaint);
-          canvas.restore();
+         // canvas.restore();
 
 
       }
@@ -132,7 +132,7 @@ public class InfoTextView extends android.support.v7.widget.AppCompatTextView {
 
       canvas.drawText(mHidetext,showx,showy,mShowTextPaint);
 
-      canvas.restore();
+     // canvas.restore();
 
 
   }
@@ -144,7 +144,7 @@ public class InfoTextView extends android.support.v7.widget.AppCompatTextView {
             float x = event.getX();
             float y = event.getY();
 
-            if((x>=showx&&x<=showx+(gettextwidth(mShowtext)))&&(y>=showy&&y<=showy+(gettextheight()))){
+            if((x>=showx&&x<=showx+(gettextwidth(mShowtext)))&&(y<=showy&&y>=showy-(gettextheight()))){
                 //Toast.makeText(mcontext,"点击展开",Toast.LENGTH_SHORT).show();
                   switch (type){
                       case 0:
