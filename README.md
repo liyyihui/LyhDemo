@@ -2,7 +2,10 @@
 TextView点击展开  和部分变色
 
 
-
+  效果
+  ![image](http://github.com/liyyihui/LyhDemo/raw/master/images-folder/dianjiqian.png)
+  ![image](http://github.com/liyyihui/LyhDemo/raw/master/images-folder/dianjihou.png)
+  
   依赖方式
 Add it in your root build.gradle at the end of repositories:
 
@@ -39,3 +42,11 @@ Step 2. Add the dependency
       app:end="4"   //结束位置
       android:text="文本的信息"
       />
+      
+      
+      图标展示
+      
+         <com.example.mymis.lyhview.LineGraphView
+        android:id="@+id/tt3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
