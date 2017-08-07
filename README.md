@@ -42,3 +42,11 @@ Step 2. Add the dependency
       app:end="4"   //结束位置
       android:text="文本的信息"
       />
+      
+      
+      图标展示
+      
+         <com.example.mymis.lyhview.LineGraphView
+        android:id="@+id/tt3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
