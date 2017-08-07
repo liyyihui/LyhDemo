@@ -20,7 +20,7 @@ Copy
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.liyyihui:LyhDemo:2.0'
+	        compile 'com.github.liyyihui:LyhDemo:2.1'
 	}
    点击展开控件
  <com.example.mymis.lyhview.InfoTextView
