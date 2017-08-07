@@ -51,5 +51,6 @@ Step 2. Add the dependency
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 	
-	
+	 gr.setArr(new int []{10,20,30,40}); //数据段落  竖
+        gr.setWeekarr(new double[]{10,15,20,17,40,30,35}); //一周每天的数据
 	
