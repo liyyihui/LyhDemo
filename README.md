@@ -3,8 +3,8 @@ TextView点击展开  和部分变色
 
 
   效果
-  ![image](http://github.com/liyyihui/LyhDemo/raw/master/images-folder/dianjiqian.png)
-  ![image](http://github.com/liyyihui/LyhDemo/raw/master/images-folder/dianjihou.png)
+  ![image](https://github.com/liyyihui/LyhDemo/blob/master/Image/dianjiqian.png)
+  ![image](https://github.com/liyyihui/LyhDemo/blob/master/Image/dianjihou.png)
   
   依赖方式
 Add it in your root build.gradle at the end of repositories:
