@@ -2,7 +2,10 @@
 TextView点击展开  和部分变色
 
 
-
+  效果
+  (http://github.com/liyyihui/LyhDemo/raw/master/images-folder/)
+  (http://github.com/liyyihui/LyhDemo/raw/master/images-folder/)
+  
   依赖方式
 Add it in your root build.gradle at the end of repositories:
 
