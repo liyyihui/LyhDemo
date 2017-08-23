@@ -3,8 +3,8 @@ TextView点击展开  和部分变色
 
 
   效果
-  ![image](http://github.com/liyyihui/LyhDemo/raw/master/images-folder/dianjiqian.png)
-  ![image](http://github.com/liyyihui/LyhDemo/raw/master/images-folder/dianjihou.png)
+  ![image](https://github.com/liyyihui/LyhDemo/blob/master/Image/dianjiqian.png)
+  ![image](https://github.com/liyyihui/LyhDemo/blob/master/Image/dianjihou.png)
   
   依赖方式
 Add it in your root build.gradle at the end of repositories:
@@ -20,7 +20,7 @@ Copy
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.liyyihui:LyhDemo:2.0'
+	        compile 'com.github.liyyihui:LyhDemo:2.1'
 	}
    点击展开控件
  <com.example.mymis.lyhview.InfoTextView
@@ -50,3 +50,7 @@ Step 2. Add the dependency
         android:id="@+id/tt3"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
+	
+	 gr.setArr(new int []{10,20,30,40}); //数据段落  竖
+        gr.setWeekarr(new double[]{10,15,20,17,40,30,35}); //一周每天的数据
+	
