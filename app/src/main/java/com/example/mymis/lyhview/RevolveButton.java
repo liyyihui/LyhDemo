@@ -28,7 +28,7 @@ public class RevolveButton extends Button {
      private RectF mRf;
     private boolean isone;
      private int mWith,mHeight;
-    private int lastx,lasty,nextx,nexty;
+    private int lastx,lasty,shift=10;
     private  int position =0;
     private Handler handler = new Handler();
     private Runnable runnable = new Runnable() {
@@ -77,10 +77,7 @@ public class RevolveButton extends Button {
         double v1 = 2 * (mWith + mHeight - 4 * rectfangle) + 2 * 3.14;
         int i1 = i / linelength;
         int i2 = i % linelength;
-     //   Log.e("LYH","带圆角周长"+v);
-      //  Log.e("LYH","带圆角周长v1   "+v1);
-        Log.e("LYH","几段"+i1);
-        Log.e("LYH","几段"+i2);
+
 
     }
 
@@ -94,19 +91,7 @@ public class RevolveButton extends Button {
         mLinepaint.setStyle(Paint.Style.STROKE);
         mLinepaint.setColor(linecolor);
        mLinepaint.setPathEffect(new CornerPathEffect(rectfangle));
-        //canvas.clipRect(mRf);
 
-       /* mPath.moveTo(0,linelength/2);
-        mPath.lineTo(0,0);
-        mPath.lineTo(linelength/2,0);
-        mPath.lineTo(linelength/2+linelength,0);
-        mPath.lineTo(linelength/2+linelength+linelength,0);
-        int i = mWith / linelength - linelength / 2;
-        if(linelength>i){
-            mPath.lineTo(linelength/2+linelength+linelength,0);
-        }*/
-        //  canvas.drawRect(mRf,mLinepaint);
-        //canvas.drawRoundRect(mRf,rectfangle,rectfangle,mLinepaint);
 
        canvas.drawPath(setrevolve(),mLinepaint);
         handler.postDelayed(runnable,500);
@@ -133,11 +118,9 @@ public class RevolveButton extends Button {
         mPath.moveTo(lastx,lasty);
       Log.e("LYH","lastx  "+lastx);
       Log.e("LYH","lasty  "+lasty);
-     // Log.e("LYH","lasty  "+lasty);
         if(position==0){// 上面一条线轨迹
             Log.e("LYH","linelength"+linelength);
             if(linelength>=mWith-lastx){//转弯
-
                 int i3 = mHeight - (linelength-(mWith-lastx));
                 mPath.lineTo(mWith,0);
                 mPath.lineTo(mWith,linelength-i3);
@@ -156,7 +139,6 @@ public class RevolveButton extends Button {
      if(position==1){//右边轨道
          Log.e("LYH","position==1");
          int i3 = mHeight - lasty;//得到左边轨道初始剩下的长度
-         int i4 = i3 - linelength;//
          if(i3<linelength){  //当不足时执行拐弯
              int i5 = mHeight - lasty;
              int i6 = mWith - (linelength - i5);
@@ -173,7 +155,6 @@ public class RevolveButton extends Button {
              return mPath;
          }
          }
-
      if(position==2){//下边轨道
          int i3 = mWith - lastx;
          Log.e("LYH","position==2");
@@ -181,26 +162,16 @@ public class RevolveButton extends Button {
              int i4 = linelength - lastx;
              mPath.lineTo(0,mHeight);
              mPath.lineTo(0,mHeight-i4);
-
              lastx = 0;
              lasty = mHeight-i4;
              position =3;
              return mPath;
          }else {
-
                 mPath.lineTo(lastx-linelength,mHeight);
                 lastx = lastx-linelength;
                 lasty = mHeight;
-
                 return mPath;
-
-
-
          }
-
-
-
-
      }
      if(position==3){//左边轨道
          Log.e("LYH","position==3");
@@ -208,23 +179,17 @@ public class RevolveButton extends Button {
          if(lasty<linelength){//拐弯
              mPath.lineTo(0,0);
              mPath.lineTo(linelength-lasty,0);
-
              lastx = linelength-lasty;
              lasty = 0;
              position =0;
              return mPath;
        }else {
-             mPath.lineTo(0,lasty+linelength);
+             mPath.lineTo(0,lasty-linelength);
              lastx = 0;
-             lasty = lasty+linelength;
+             lasty = lasty-linelength;
              return mPath;
-
          }
-
      }
-
-
-
     return mPath;
   }
 }
